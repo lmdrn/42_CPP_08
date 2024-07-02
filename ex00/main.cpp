@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:08:46 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/02 18:09:09 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/07/02 18:42:34 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 int main(void)
 {
+	std::vector<int> v = {1, 2, 3, 4, 5};
 	return (0);
 }

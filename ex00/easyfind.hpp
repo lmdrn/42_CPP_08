@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   Easyfind.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:09:15 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/02 18:09:40 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/07/02 18:52:36 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,27 @@
 # define EASYFIND_HPP
 
 #include <iostream>
+#include <algorithm>
+#include <vector>
 
-class easyfind
+class Easyfind
 {
 	private:
 	    	// Private members
+		T*	container;
+		int	nbr;
 
 	public:
     		// Constructor
-    		easyfind();
-
+    		Easyfind();
     		// Destructor
-    		~easyfind();
-
+    		~Easyfind();
     		// Copy Constructor
-    		easyfind(const easyfind& copy);
-
+    		Easyfind(const Easyfind& copy);
     		// Copy Assignment Operator
-    		easyfind& operator=(const easyfind& copy);
+    		Easyfind& operator=(const Easyfind& copy);
+		template<typename T>
+		typename T::iter	easyfind(T& container, int value);
 };
 
 #endif /* EASYFIND_HPP */
