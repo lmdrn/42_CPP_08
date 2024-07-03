@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 13:53:27 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/03 16:26:53 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:29:47 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,3 +124,17 @@ int main(void)
 	}
 	return(0);
 }
+
+//main du sujet
+//int main()
+//{
+//	Span sp = Span(5);
+//	sp.addNumber(6);
+//	sp.addNumber(3);
+//	sp.addNumber(17);
+//	sp.addNumber(9);
+//	sp.addNumber(11);
+//	std::cout << sp.shortestSpan() << std::endl;
+//	std::cout << sp.longestSpan() << std::endl;
+//	return 0;
+//}
