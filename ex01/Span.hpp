@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 13:53:54 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/03 14:39:02 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:20:26 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ class Span
 
 		//Member functions
 		void		addNumber(int toAdd);
-		unsigned int	shortestSpan();
-		unsigned int	longestSpan();
+		int		shortestSpan();
+		int		longestSpan();
 };
 
 class	AboveArrayException : public std::exception
@@ -57,6 +57,15 @@ class	AboveArrayException : public std::exception
 		const char* what() const throw()
 		{
 			return ("You have reached the end-size of the array. You cannot add more numbers !");
+		}
+};
+
+class	ArrayTooSmallException : public std::exception
+{
+	public:
+		const char* what() const throw()
+		{
+			return ("Can't find a span, array is too smoool!");
 		}
 };
 
