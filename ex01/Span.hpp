@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 13:53:54 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/03 15:20:26 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:21:17 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,24 +49,37 @@ class Span
 		void		addNumber(int toAdd);
 		int		shortestSpan();
 		int		longestSpan();
-};
 
-class	AboveArrayException : public std::exception
-{
-	public:
-		const char* what() const throw()
+		
+
+		//exceptions
+		class	AboveArrayException : public std::exception
 		{
-			return ("You have reached the end-size of the array. You cannot add more numbers !");
+			public:
+				const char* what() const throw()
+				{
+					return ("You have reached the end-size of the array. You cannot add more numbers !");
+				}
+		};
+
+		class	ArrayTooSmallException : public std::exception
+		{
+			public:
+				const char* what() const throw()
+				{
+					return ("Can't find a span, array is too smoool!");
+				}
+		};
+
+		template<typename Iter>
+		void	addNbrsWithIterator(Iter start, Iter end)
+		{
+			if (_tablo.size() + std::distance(start, end) > _size)
+				throw ArrayTooSmallException();
+			_tablo.insert(_tablo.end(), start, end);
+			std::cout << GREEN << "SUCCESS! Array was populated" << RESET << std::endl;
 		}
 };
 
-class	ArrayTooSmallException : public std::exception
-{
-	public:
-		const char* what() const throw()
-		{
-			return ("Can't find a span, array is too smoool!");
-		}
-};
 
 #endif /* SPAN_HPP */

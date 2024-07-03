@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 13:53:27 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/03 15:47:30 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:26:53 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,39 @@ int main(void)
 		std::cout << RED << "ERROR: " << error.what() << RESET << std::endl;	
 	}
 	std::cout << std::endl;
+
+	std::cout << ORANGE << "TEST SEVEN: CREATE ARRAY + POPULATE IT THROUGH ITERATOR" << RESET << std::endl;
+	Span	coucou(10);
+	int tmp[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+	std::vector<int> vecna(tmp, tmp + sizeof(tmp) / sizeof(int));
+	try
+	{
+		coucou.addNbrsWithIterator(vecna.begin(), vecna.end());
+	}
+	catch(const std::exception& error)
+	{
+		std::cout << RED << "ERROR: " << error.what() << RESET << std::endl;	
+	}
+	std::cout << PURPLE << "checking array was filled" << RESET << std::endl;
+	std::vector<int>::iterator loop = vecna.begin();
+	for (loop = vecna.begin(); loop != vecna.end();loop++)
+	{
+		std::cout << *loop << " ";
+	}
+	std::cout << std::endl;
+	std::cout << std::endl;
+
+	std::cout << ORANGE << "TEST EIGHT: CREATE ARRAY + POPULATE IT THROUGH ITERATOR WITH MORE THAN ARRAY SIZE SHOULD THROW ERROR" << RESET << std::endl;
+	Span	coucou2(10);
+	int tmp2[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	std::vector<int> vecna2(tmp2, tmp2 + sizeof(tmp2) / sizeof(int));
+	try
+	{
+		coucou2.addNbrsWithIterator(vecna2.begin(), vecna2.end());
+	}
+	catch(const std::exception& error)
+	{
+		std::cout << RED << "ERROR: " << error.what() << RESET << std::endl;	
+	}
 	return(0);
 }
