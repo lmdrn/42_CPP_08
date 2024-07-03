@@ -6,7 +6,7 @@
 #    By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/09 10:48:23 by lmedrano          #+#    #+#              #
-#    Updated: 2024/07/03 13:34:52 by lmedrano         ###   ########.fr        #
+#    Updated: 2024/07/03 14:34:57 by lmedrano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,13 +15,13 @@ ORANGE 		= \033[38;5;215m
 GREEN 		= \033[38;5;82m
 RESET 		= \033[0m
 
-SRCS 		= main.cpp
+SRCS 		= main.cpp Span.cpp
 
-DEPS 		= Easyfind.hpp Easyfind.tpp
+DEPS 		= Span.hpp
 
 OBJS 		= ${SRCS:.cpp=.o}
 
-NAME		= templates
+NAME		= span
 
 CC 			= c++
 

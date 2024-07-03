@@ -1,1 +1,4 @@
-.generate
+.generate_class_header.sh
+ex00/*.o
+ex01/*.o
+ex02/*.o
