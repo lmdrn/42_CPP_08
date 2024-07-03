@@ -6,7 +6,7 @@
 #    By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/09 10:48:23 by lmedrano          #+#    #+#              #
-#    Updated: 2024/07/03 16:39:54 by lmedrano         ###   ########.fr        #
+#    Updated: 2024/07/03 16:39:32 by lmedrano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,13 +15,13 @@ ORANGE 		= \033[38;5;215m
 GREEN 		= \033[38;5;82m
 RESET 		= \033[0m
 
-SRCS 		= main.cpp Span.cpp
+SRCS 		= main.cpp
 
-DEPS 		= Span.hpp
+DEPS 		= MutantStack.hpp MutantStack.tpp
 
 OBJS 		= ${SRCS:.cpp=.o}
 
-NAME		= span
+NAME		= mutant
 
 CC 			= c++
 

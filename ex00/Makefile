@@ -6,7 +6,7 @@
 #    By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/09 10:48:23 by lmedrano          #+#    #+#              #
-#    Updated: 2024/07/03 13:34:52 by lmedrano         ###   ########.fr        #
+#    Updated: 2024/07/03 16:39:48 by lmedrano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ DEPS 		= Easyfind.hpp Easyfind.tpp
 
 OBJS 		= ${SRCS:.cpp=.o}
 
-NAME		= templates
+NAME		= easyfind
 
 CC 			= c++
 
