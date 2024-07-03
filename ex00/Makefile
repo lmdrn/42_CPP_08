@@ -6,7 +6,7 @@
 #    By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/09 10:48:23 by lmedrano          #+#    #+#              #
-#    Updated: 2024/07/02 18:07:33 by lmedrano         ###   ########.fr        #
+#    Updated: 2024/07/03 13:34:52 by lmedrano         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ RESET 		= \033[0m
 
 SRCS 		= main.cpp
 
-DEPS 		= easyfind.hpp easyfind.tpp
+DEPS 		= Easyfind.hpp Easyfind.tpp
 
 OBJS 		= ${SRCS:.cpp=.o}
 
