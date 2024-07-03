@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 13:53:27 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/03 15:31:43 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:47:30 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,11 +57,36 @@ int main(void)
 	piti.addNumber(0);
 	try
 	{
-		std::cout << GREEN << "SUCESS! Shortest Span is: " << test.shortestSpan() << RESET << std::endl;
+		piti.shortestSpan();
 	}
 	catch(const std::exception& error)
 	{
 		std::cout << RED << "ERROR: " << error.what() << RESET << std::endl;	
 	}
+	std::cout << std::endl;
+
+	std::cout << ORANGE << "TEST FIVE: BIGGEST SPAN" << RESET << std::endl;
+	try
+	{
+		std::cout << GREEN << "SUCESS! Biggest Span is: " << test.longestSpan() << RESET << std::endl;
+	}
+	catch(const std::exception& error)
+	{
+		std::cout << RED << "ERROR: " << error.what() << RESET << std::endl;	
+	}
+	std::cout << std::endl;
+
+	std::cout << ORANGE << "TEST SIX: TEST SPAN WITH TOO SMALL ARRAY SHOULD THROW ERROR" << RESET << std::endl;
+	Span fatass(5);
+	fatass.addNumber(0);
+	try
+	{
+		fatass.longestSpan();
+	}
+	catch(const std::exception& error)
+	{
+		std::cout << RED << "ERROR: " << error.what() << RESET << std::endl;	
+	}
+	std::cout << std::endl;
 	return(0);
 }

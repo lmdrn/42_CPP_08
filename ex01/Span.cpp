@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 13:57:02 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/03 15:29:21 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:41:34 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,11 @@ int	Span::longestSpan()
 	if (_tablo.size() <= 1)
 		throw ArrayTooSmallException();
 	//look for min nbr
+	int	min = *std::min_element(_tablo.begin(), _tablo.end());
+	//std::cout << PURPLE << "Min is : " << min << RESET << std::endl;
 	//look for max nbr 
+	int	max = *std::max_element(_tablo.begin(), _tablo.end());
+	//std::cout << PURPLE << "Max is : " << max << RESET << std::endl;
 	//return the difference betwenn max and min
-	return (0);
+	return (max - min);
 }
