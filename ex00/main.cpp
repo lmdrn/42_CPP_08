@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 18:08:46 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/09 12:53:37 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/08/12 10:53:51 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main(void)
 	v[2] = 3;
 	v[3] = 4;
 	v[4] = 5;
-	std::cout << GREEN << "XX -- Printing list -- XX" << RESET << std::endl;
+	std::cout << GREEN << "XX -- Printing vector -- XX" << RESET << std::endl;
 	for (unsigned int i = 0; i < v.size(); i++)
 	{
 		std::cout << v[i] << " ";
@@ -67,6 +67,15 @@ int main(void)
 		std::cout << RED << "ERROR: " << error.what() << RESET << std::endl;
 	}
 	std::cout << "" << std::endl;
+	try 
+	{
+		easyfind(l, 7);
+	}
+	catch (const std::exception& error)
+	{
+		std::cout << RED << "ERROR: " << error.what() << RESET << std::endl;
+	}
+	std::cout << "" << std::endl;
 	
 
 	std::cout << ORANGE << "TEST THREE: testing with vector non existing value" << RESET << std::endl;
@@ -76,7 +85,7 @@ int main(void)
 	v2[2] = 3;
 	v2[3] = 4;
 	v2[4] = 5;
-	std::cout << GREEN << "XX -- Printing list -- XX" << RESET << std::endl;
+	std::cout << GREEN << "XX -- Printing vector -- XX" << RESET << std::endl;
 	for (unsigned int i = 0; i < v2.size(); i++)
 	{
 		std::cout << v2[i] << " ";
