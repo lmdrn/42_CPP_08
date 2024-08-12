@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 13:53:27 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/03 16:37:56 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/08/12 11:07:26 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,6 @@ int main(void)
 		std::cout << *loop << " ";
 	}
 	std::cout << std::endl;
-	std::cout << std::endl;
 
 	std::cout << ORANGE << "TEST EIGHT: CREATE ARRAY + POPULATE IT THROUGH ITERATOR WITH MORE THAN ARRAY SIZE SHOULD THROW ERROR" << RESET << std::endl;
 	Span	coucou2(10);
@@ -119,6 +118,23 @@ int main(void)
 		coucou2.addNbrsWithIterator(vecna2.begin(), vecna2.end());
 	}
 	catch(const std::exception& error)
+	{
+		std::cout << RED << "ERROR: " << error.what() << RESET << std::endl;	
+	}
+	std::cout << std::endl;
+
+	std::cout << ORANGE << "TEST NINE: SPANS WITH 10000 NBRS" << RESET << std::endl;
+	try
+	{
+		Span	bigSpan = Span(10000);
+		for (int i = 0; i < 10000; i++)
+		{
+			bigSpan.addNumber(rand());
+		}
+		std::cout << "shortest span is: " << bigSpan.shortestSpan() <<std::endl;
+		std::cout << "longest span is: " << bigSpan.longestSpan() <<std::endl;
+	}
+	catch (const std::exception& error)
 	{
 		std::cout << RED << "ERROR: " << error.what() << RESET << std::endl;	
 	}

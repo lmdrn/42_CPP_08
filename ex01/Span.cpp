@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 13:57:02 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/03 16:14:42 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/08/12 11:13:38 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,8 @@ void		Span::addNumber(int toAdd)
 		throw AboveArrayException();
 }
 
+//Shortest Span: The smallest difference between any 
+//two consecutive numbers in a sorted sequence.
 int	Span::shortestSpan()
 {
 	if (_tablo.size() <= 1)
@@ -79,6 +81,8 @@ int	Span::shortestSpan()
 	return (smolest);
 }
 
+//Longest Span: The difference between the 
+//largest and smallest numbers in the sequence.
 int	Span::longestSpan()
 {
 	if (_tablo.size() <= 1)
