@@ -6,7 +6,7 @@
 /*   By: lmedrano <lmedrano@student.42lausanne.ch>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 13:27:58 by lmedrano          #+#    #+#             */
-/*   Updated: 2024/07/09 15:43:12 by lmedrano         ###   ########.fr       */
+/*   Updated: 2024/08/12 11:21:45 by lmedrano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,4 +68,27 @@ typename std::deque<T>::const_iterator MutantStack<T>::end() const
 	return (std::stack<T>::c.end());
 }
 
+template<typename T>
+typename std::deque<T>::reverse_iterator MutantStack<T>::rbegin()
+{
+	return (std::stack<T>::c.rbegin());
+}
+
+template<typename T>
+typename std::deque<T>::reverse_iterator MutantStack<T>::rend()
+{
+	return (std::stack<T>::c.rend());
+}
+
+template<typename T>
+typename std::deque<T>::const_reverse_iterator MutantStack<T>::rbegin() const
+{
+	return (std::stack<T>::c.rbegin());
+}
+
+template<typename T>
+typename std::deque<T>::const_reverse_iterator MutantStack<T>::rend() const
+{
+	return (std::stack<T>::c.rend());
+}
 #endif /* MUTANTSTACK_TPP */
